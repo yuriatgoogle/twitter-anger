@@ -11,7 +11,7 @@ var T = new Twit(twitterConfig);
 
 
 var params = {
-    q: 'trump',
+    q: 'donnie',
     count: 100
 } 
 
