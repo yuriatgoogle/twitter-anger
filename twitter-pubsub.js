@@ -1,4 +1,4 @@
-//Twitter credentials
+//Twitter credentials in separate config file
 var config = require('./config.json');
 
 var Twit = require('twit');
