@@ -1,0 +1,41 @@
+{
+  "name": "twitter-pubsub",
+  "version": "1.0.0",
+  "description": "Get tweets, publish to PubSub",
+  "repository": "https://github.com/GoogleCloudPlatform/nodejs-getting-started",
+  "private": true,
+  "scripts": {
+    "start": "GCLOUD_PROJECT=ymg-twitter-pubsub-dataflow-bq node express-trace.js",
+    "test": "samples test app",
+    "cover": "nyc --cache npm test; nyc report --reporter=html"
+  },
+  "author": "Google Inc.",
+  "contributors": [
+    {
+      "name": "Yuri Grinshteyn",
+      "email": "ymg@google.com"
+    }
+  ],
+  "license": "Apache-2.0",
+  "semistandard": {
+    "globals": [
+      "after",
+      "afterEach",
+      "before",
+      "beforeEach",
+      "describe",
+      "it"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "got": "^7.0.0",
+    "http": "0.0.0",
+    "sleep": "5.0.0",
+    "twit": "^2.2.9",
+    "twitter": "1.0.0"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  }
+}
