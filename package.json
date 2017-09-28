@@ -5,7 +5,7 @@
   "repository": "https://github.com/GoogleCloudPlatform/nodejs-getting-started",
   "private": true,
   "scripts": {
-    "start": "GCLOUD_PROJECT=ymg-twitter-pubsub-dataflow-bq node express-trace.js",
+    "start": "GCLOUD_PROJECT=ymg-twitter-node-dataflow-bq node express-trace.js",
     "test": "samples test app",
     "cover": "nyc --cache npm test; nyc report --reporter=html"
   },
@@ -28,6 +28,7 @@
     ]
   },
   "dependencies": {
+    "@google-cloud/pubsub": "^0.14.2",
     "express": "^4.15.4",
     "got": "^7.0.0",
     "http": "0.0.0",
