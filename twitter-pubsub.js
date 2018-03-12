@@ -3,12 +3,12 @@ var twitterCreds = require('./twitterCreds.json');
 
 //twitter setup
 var Twit = require('twit');
-var T = new Twit(twitterCreds); 
+var T = new Twit(twitterCreds);
 
 //twitter parameters
 var params = {
-    track: 'trump'
-} 
+    user: 'ygrinshteyn'
+}
 
 //pubsub setup
 var pubsub = require('@google-cloud/pubsub')({
@@ -25,7 +25,7 @@ var stream = T.stream('statuses/filter', params)
 stream.on('tweet', function (tweet) {
     console.log("got tweet!")
     publisher.publish(new Buffer(JSON.stringify(tweet)), function(err, messageId) {
-        //if can't publish - 
+        //if can't publish -
         function onError(err) {
             console.log("error publishing - " + err);
         }
